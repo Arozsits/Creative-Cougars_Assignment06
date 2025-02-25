@@ -34,6 +34,9 @@
     <Compile Include="JP_package\__init__.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="RH_package\drink.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="RH_package\__init__.py">
       <SubType>Code</SubType>
     </Compile>
