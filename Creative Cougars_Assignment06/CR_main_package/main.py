@@ -15,16 +15,20 @@
 # Importing of all the packages / classes created by group members
 from AR_package.mainCourse import *
 # from RH_package. import *
-# from JP_package. import *
+from JP_package.sideDishes import *
 
 # Entry point check that will contain all the code in main.py and ensure this is the entry point
 if __name__ == "__main__":
     
     # Code from mainCourse class created by Andrew Rozsits
-    order_1 = RestaurantOrder("Burger", 2)
-    print(order_1.__str__())
+    main_order = RestaurantOrder("Burger", 2)
+    print(main_order.calculate_total())
+    print(main_order.__str__())
 
     # Code from _____ class created by Ray Happel
+    side_order = Side("Waffle Fries", "Large", 3)
+    print(side_order.__str__())
 
     # Code from _____ class created by Jay Powell
 
+    main_order.calculate_total()
