@@ -21,6 +21,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AR_package\mainCourse.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="AR_package\__init__.py">
       <SubType>Code</SubType>
     </Compile>
