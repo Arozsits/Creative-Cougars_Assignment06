@@ -13,15 +13,16 @@
 # Anything else that's relevant: None
 
 # Importing of all the packages / classes created by group members
-# from AR_package. import *
+from AR_package.mainCourse import *
 # from RH_package. import *
 # from JP_package. import *
 
 # Entry point check that will contain all the code in main.py and ensure this is the entry point
 if __name__ == "__main__":
-    pass
-
-    # Code from _____ class created by Andrew Rozsits
+    
+    # Code from mainCourse class created by Andrew Rozsits
+    order_1 = RestaurantOrder("Burger", 2)
+    print(order_1.__str__())
 
     # Code from _____ class created by Ray Happel
 
