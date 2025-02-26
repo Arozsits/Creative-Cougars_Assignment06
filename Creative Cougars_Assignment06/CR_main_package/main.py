@@ -20,12 +20,21 @@ from JP_package.sideDishes import *
 # Entry point check that will contain all the code in main.py and ensure this is the entry point
 if __name__ == "__main__":
     
+    print("Please enter your selections matching the capitalization of the options.")
+
     # Instantiation from RestaurantOrder class created by Andrew Rozsits
-    main_order = RestaurantOrder("Burger", 2)
+    main_order = RestaurantOrder(
+        input("Choose your main course from [Burger, Chicken Sandwich, Sliders]: ")
+        , int(input("Enter Quantity: "))
+        )
     print(main_order.__str__())
 
     # Instantiation from Side class created by Jay Powell
-    side_order = Side("Waffle Fries", "Large", 3)
+    side_order = Side(
+        input("Choose your side from [French Fries, Waffle Fries, Chicken Nuggets]: ")
+        , input("Choose the size from [Small, Medium, Large]: ")
+        , int(input("Enter Quantity: "))
+        )
     print(side_order.__str__())
 
     # Instantiation from Drink class created by Ray Happel
