@@ -40,6 +40,9 @@ class RestaurantOrder:
         
         self._main_course = main_course
         self._quantity = quantity 
+
+        self.set_main_course(main_course)  
+        self.set_quantity(quantity)  
     
   
     
