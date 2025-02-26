@@ -20,15 +20,17 @@ from JP_package.sideDishes import *
 # Entry point check that will contain all the code in main.py and ensure this is the entry point
 if __name__ == "__main__":
     
-    # Code from mainCourse class created by Andrew Rozsits
+    # Instantiation from RestaurantOrder class created by Andrew Rozsits
     main_order = RestaurantOrder("Burger", 2)
     print(main_order.calculate_total())
     print(main_order.__str__())
 
-    # Code from _____ class created by Ray Happel
+    # Instantiation from Side class created by Jay Powell
     side_order = Side("Waffle Fries", "Large", 3)
     print(side_order.__str__())
 
-    # Code from _____ class created by Jay Powell
+    # Instantiation from  class created by Ray Happel
+    # drink_order = Drink() # Doesn't currently work
 
-    main_order.calculate_total()
+    meal_total = main_order.calculate_total() + side_order.calculate_total()
+    print("Cost of your Meal: ", meal_total)

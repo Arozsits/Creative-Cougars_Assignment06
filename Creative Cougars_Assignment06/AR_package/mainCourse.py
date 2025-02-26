@@ -39,7 +39,7 @@ class RestaurantOrder:
             raise ValueError("Quantity must be at least 1.")
         
         self._main_course = main_course
-        self._quantity = quantity
+        self._quantity = quantity 
     
   
     
