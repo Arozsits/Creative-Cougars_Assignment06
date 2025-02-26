@@ -22,7 +22,6 @@ if __name__ == "__main__":
     
     # Instantiation from RestaurantOrder class created by Andrew Rozsits
     main_order = RestaurantOrder("Burger", 2)
-    print(main_order.calculate_total())
     print(main_order.__str__())
 
     # Instantiation from Side class created by Jay Powell
@@ -32,5 +31,5 @@ if __name__ == "__main__":
     # Instantiation from  class created by Ray Happel
     # drink_order = Drink() # Doesn't currently work
 
-    meal_total = main_order.calculate_total() + side_order.calculate_total()
+    meal_total = main_order.calculate_total() + side_order.calculate_total() #+drink_order.calculate_total()
     print("Cost of your Meal: ", meal_total)
