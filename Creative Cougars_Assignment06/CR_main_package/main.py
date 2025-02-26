@@ -28,7 +28,7 @@ if __name__ == "__main__":
     side_order = Side("Waffle Fries", "Large", 3)
     print(side_order.__str__())
 
-    # Instantiation from  class created by Ray Happel
+    # Instantiation from Drink class created by Ray Happel
     # drink_order = Drink() # Doesn't currently work
 
     meal_total = main_order.calculate_total() + side_order.calculate_total() #+drink_order.calculate_total()
