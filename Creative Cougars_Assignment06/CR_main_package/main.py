@@ -14,7 +14,7 @@
 
 # Importing of all the packages / classes created by group members
 from AR_package.mainCourse import *
-# from RH_package. import *
+from RH_package.drink import *
 from JP_package.sideDishes import *
 
 # Entry point check that will contain all the code in main.py and ensure this is the entry point
@@ -38,7 +38,7 @@ if __name__ == "__main__":
     print(side_order.__str__())
 
     # Instantiation from Drink class created by Ray Happel
-    # drink_order = Drink() # Doesn't currently work
+    # drink_order = DrinkOrder() # Doesn't currently work
 
     meal_total = main_order.calculate_total() + side_order.calculate_total() #+drink_order.calculate_total()
     print("Cost of your Meal: ", meal_total)
