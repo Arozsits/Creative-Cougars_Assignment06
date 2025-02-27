@@ -92,12 +92,15 @@ class Side(object):
 
     def calculate_total(self):
         """
+        Calculates the total cost of the side order
         @return float: The total cost of the side order.
         """
         return self.price * self.get_quantity()
 
     def __str__(self):
         """
-        @return String: A formatted description of the side item.
+        Generate a string representation of the side order.
+        @returns String: A formatted string showing the order details, including side name, size, quantity, and total price.
         """
-        return f"{self.get_quantity()}x {self.get_size()} {self.get_name()} - ${self.calculate_total():.2f}"
+        return f"Order: {self.get_quantity()} x {self.get_size()} {self.get_name()} - Total: ${self.calculate_total():.2f}"
+
