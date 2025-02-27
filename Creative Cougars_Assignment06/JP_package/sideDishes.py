@@ -41,12 +41,14 @@ class Side(object):
     @property
     def price(self):
         """ 
+        Calculates the price based on given parameters and saved information.
         @return float: Price per unit based on the name and size.
         """
         return self.Price_List[self.get_name()][self.get_size()]
 
     def get_name(self):
         """ 
+        Retreives the item name from the class object
         @return String: The name of the side.
         """
         return self.__name
@@ -61,7 +63,8 @@ class Side(object):
         self.__name = name
 
     def get_size(self):
-        """ 
+        """
+        Retreives the size from the class object
         @return String: The size of the side.
         """
         return self.__size
@@ -77,6 +80,7 @@ class Side(object):
 
     def get_quantity(self):
         """ 
+        Retreives the quantity from the class object
         @return int: The quantity of the side ordered.
         """
         return self.__quantity
