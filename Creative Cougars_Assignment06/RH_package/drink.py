@@ -20,7 +20,7 @@ class DrinkOrder (object):
 
     Price_List = {
         "Soft Drink": {"Small": 1.00, "Medium": 2.00, "Large": 3.00},
-        "Milk shake": {"Small": 2.00, "Medium": 3.00, "Large": 4.00},
+        "Milk Shake": {"Small": 2.00, "Medium": 3.00, "Large": 4.00},
     }
 
     def __init__(self, drink, size, quantity):
@@ -40,11 +40,11 @@ class DrinkOrder (object):
         Retrieve the price of the drink order placed by the customer
         @return float: Price per drink based on the name and size.
         """
-        return self.Price_List[self.get_name()][self.get_size()]
+        return self.Price_List[self.get_drink()][self.get_size()]
 
     def get_drink(self):
         """ 
-        Retrieve the name of the drink(s) ordered by the custoemr.
+        Retrieve the name of the drink(s) ordered by the customer.
         @return String: The name of the drink ordered by the customer.
         """
         return self.__drink
@@ -61,6 +61,7 @@ class DrinkOrder (object):
 
     def get_size(self):
         """ 
+        Retrieve the size of the drink(s) ordered by the customer.
         @return String: The size of the drink ordered by the customer.
         """
         return self.__size
@@ -76,6 +77,7 @@ class DrinkOrder (object):
 
     def get_quantity(self):
         """ 
+        Retrieve the quantity of the drink(s) ordered by the customer.
         @return int: The quantity of the drink ordered.
         """
         return self.__quantity
@@ -97,15 +99,17 @@ class DrinkOrder (object):
 
     def calculate_total(self):
         """
+        Multiplies the price of the selected drink by the quantity of them.
         @return float: The total cost of the drink order.
         """
         return self.price * self.get_quantity()
 
     def __str__(self):
         """
+        Gives a description of the selected items from the drink class.
         @return String: A formatted description of the drink item.
         """
-        return f"{self.get_quantity()}x {self.get_size()} {self.get_name()} - ${self.calculate_total():.2f}"
+        return f"Order: {self.get_quantity()} x {self.get_size()} {self.get_drink()} - Total: ${self.calculate_total():.2f}"
 
     
     
