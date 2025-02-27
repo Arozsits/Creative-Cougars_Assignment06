@@ -13,6 +13,7 @@
 # Anything else that's relevant: None
 
 # Importing of all the packages / classes created by group members
+from tkinter import ROUND
 from AR_package.mainCourse import *
 from RH_package.drink import *
 from JP_package.sideDishes import *
@@ -44,6 +45,7 @@ if __name__ == "__main__":
         , input("Choose the size from [Small, Medium, Large]: ")
         , int(input("Enter Quantity: "))
         )
+    print(drink_order.__str__())
 
-    meal_total = main_order.calculate_total() + side_order.calculate_total() +drink_order.calculate_total()
+    meal_total = round(main_order.calculate_total() + side_order.calculate_total() + drink_order.calculate_total(), 2)
     print("Total Cost of your Meal: ", meal_total)

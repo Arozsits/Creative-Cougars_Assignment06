@@ -88,13 +88,8 @@ class DrinkOrder (object):
         @param quantity int: The drink quantity can be a positive integer or zero.
         @raises ValueError: If quantity ordered is less than zero.
         """
-        while True:
-            try:
-                if quantity >= 0:
-                    return quantity
-                else:
-                    print("Quantity must be zero or a positive integer.")
-            except ValueError: print ("Invalid input. Please enter an integer that is positive or zero.")
+        if quantity < 0:
+            raise Exception("Invalid quantity. Must be >= 0.")
         self.__quantity = quantity
 
     def calculate_total(self):
